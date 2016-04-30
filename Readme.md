@@ -48,6 +48,19 @@
     ref origin/master
     post-deploy /var/www/myapp.com/update.sh
 
+ You can also use group names for environments to be able to deploy and run commands on them.
+
+    [develop:appA]
+    key /path/to/some.pem
+
+    [develop:appB]
+    key /path/to/some.pem
+    
+
+ Run an `deploy(1)` on an entire group by using the `:*` string after the group name.
+
+    deploy develop:*
+
 ## Directives
 
 ### key (optional)
@@ -126,6 +139,39 @@
   deployment, ignoring tests (for now), as they are assumed to have run correctly.
 
       test ./something
+
+
+# deploy-cluster
+
+  A wrapper script that runs `deploy(1)` for multiple environments from the config file
+
+## Usage
+
+
+      Usage: deploy-cluster [options] <cluster> [command]
+
+      Options:
+
+        -V, --version        output program version
+        
+      Commands:
+
+        All the same commands as deploy(1) as it is just a wrapper for deploy(1)
+
+## Configuration
+
+ Use the semi colon `:` to group environments into clusters
+
+    [develop:appA]
+    key /path/to/some.pem
+
+    [develop:appB]
+    key /path/to/some.pem
+
+## Sample
+
+    deploy-cluster develop
+
 
 ## License
 
