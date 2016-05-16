@@ -1,4 +1,38 @@
 
+0.7.3.1 / 2016-05-17
+====================
+
+  * adding key to mkconfig
+
+0.7.3 / 2016-05-01
+==================
+
+  * updating version
+  * fixing hook names
+
+0.7.2 / 2016-04-30
+==================
+
+  * update version
+  * check if env is given first before doing config_section test
+
+0.7.1 / 2016-04-30
+==================
+
+  * update version
+  * fix bug with mkconfig
+  * updated help command instructions
+  * Configuration output command
+
+0.7.0 / 2016-04-30
+==================
+
+  * updating Readme
+  * updating Readme
+  * show cluster required error if no args
+  * Support for running commands on multiple environments
+  * Create deploy-cluster script
+
 0.6.0 / 2012-06-19 
 ==================
 
